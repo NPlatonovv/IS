@@ -46,7 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FIleType.cs" />
+    <Compile Include="FileAnalyzer.cs" />
+    <Compile Include="FileParser.cs" />
+    <Compile Include="FilePrinter.cs" />
+    <Compile Include="FileType.cs" />
     <Compile Include="InputFile.cs" />
     <Compile Include="OrganizationFile.cs" />
     <Compile Include="Program.cs" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IS
 {
-    internal class InputFile
+    public class InputFile
     {
         public string Name { get; set; }
         public DateTime CreationDate { get; set; }
