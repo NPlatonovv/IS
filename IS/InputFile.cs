@@ -9,10 +9,11 @@ namespace IS
     internal class InputFile
     {
         public string Name { get; set; }
-        public string CreationDate { get; set; }
+        public DateTime CreationDate { get; set; }
         public int Size { get; set; }
+        
 
-        public InputFile(string name, string creationDate, int size)
+        public InputFile(string name, DateTime creationDate, int size)
         {
             Name = name;
             CreationDate = creationDate;

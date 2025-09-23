@@ -20,12 +20,13 @@ namespace IS
                 int firstQuote = line.IndexOf('"');
                 int lastQuote = line.LastIndexOf('"');
 
-                string fileName = line.Substring(firstQuote + 1, lastQuote - firstQuote - 1);
+                string fileName = line.Substring(firstQuote + 1,
+                    lastQuote - firstQuote - 1);
 
                 string remaining = line.Substring(lastQuote + 1).Trim();
 
                 string[] parts = remaining.Split(' ');
-                string creationDate = parts[0];
+                DateTime creationDate = DateTime.Parse(parts[0]);
                 int size = int.Parse(parts[1]);
                 InputFile file = new InputFile(fileName, creationDate, size);
                 files.Add(file);
@@ -55,4 +56,3 @@ namespace IS
         }
     }
 }
-
