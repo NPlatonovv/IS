@@ -17,6 +17,7 @@ namespace IS.Services
 
             DateTime creationDate = DateTime.Parse(parts[0]);
             int size = int.Parse(parts[1]);
+            bool isExecutable = bool.Parse(parts[2]);
 
             string org = null;
             int? dept = null;
@@ -43,15 +44,15 @@ namespace IS.Services
 
             if (type.HasValue)
             {
-                return new TypedFile(name, creationDate, size, type.Value);
+                return new TypedFile(name, creationDate, size, isExecutable, type.Value);
             }
 
             if (org != null)
             {
-                return new OrganizationFile(name, creationDate, size, org, dept);
+                return new OrganizationFile(name, creationDate, size, isExecutable, org, dept);
             }
 
-            return new InputFile(name, creationDate, size);
+            return new InputFile(name, creationDate, size, isExecutable);
         }
     }
 

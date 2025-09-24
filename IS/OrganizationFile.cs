@@ -10,8 +10,8 @@ namespace IS
     {
         public string Organization { get; set; }
         public int? DepartmentCode { get; set; }
-        public OrganizationFile (string name, DateTime creationDate, int size, string organization, int? departmentCode)
-            : base(name,creationDate,size)
+        public OrganizationFile (string name, DateTime creationDate, int size, bool isExecutable, string organization, int? departmentCode)
+            : base(name,creationDate,size, isExecutable)
         {
             Organization = organization;
             DepartmentCode = departmentCode;
